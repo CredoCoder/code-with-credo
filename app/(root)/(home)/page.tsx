@@ -1,11 +1,11 @@
 import { BackgroundBeams } from "@/components/BeamsBackground";
-import { ModeToggle } from "@/components/ModeToggle";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main>
-      <BackgroundBeams />
-      <ModeToggle />
-    </main>
+    <>
+      {/* <BackgroundBeams /> */}
+      <Hero />
+    </>
   );
 }

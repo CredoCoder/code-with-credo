@@ -67,25 +67,21 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        wheel: {
+          to: {
+            opacity: "0",
+            top: "60px",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        wheel: "wheel 2s ease-out infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
-// function addVariablesForColors({ addBase, theme }: any) {
-//   let allColors = flattenColorPalette(theme("colors"));
-//   let newVars = Object.fromEntries(
-//     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-//   );
-
-//   addBase({
-//     ":root": newVars,
-//   });
-// }
 
 export default config;
