@@ -1,11 +1,13 @@
+import AboutMe from "@/components/sections/AboutMe";
 import { BackgroundBeams } from "@/components/BeamsBackground";
-import Hero from "@/components/Hero";
+import Hero from "@/components/sections/Hero";
 
 export default function Home() {
   return (
     <>
-      <BackgroundBeams />
+      {/* <BackgroundBeams /> */}
       <Hero />
+      <AboutMe />
     </>
   );
 }

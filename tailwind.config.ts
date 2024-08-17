@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+import defaultTheme from "tailwindcss/defaultTheme";
+
 const config = {
   darkMode: ["class"],
   content: [
@@ -10,6 +12,12 @@ const config = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      xxxs: "300px",
+      xxs: "400px",
+      xs: "500px",
+      ...defaultTheme.screens,
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -57,6 +65,9 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      margin: {
+        sectionGap: "var(--section-gap)",
       },
       keyframes: {
         "accordion-down": {

@@ -1,5 +1,5 @@
 import React from "react";
-import { TypewriterEffect } from "./TypewriterEffect";
+import { TypewriterEffect } from "../TypewriterEffect";
 import Image from "next/image";
 
 const Hero = () => {
@@ -13,7 +13,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="w-full h-[calc(100vh-80px)] flex items-center justify-center gap-7 flex-col">
+    <section className="w-full h-[calc(100vh-80px)] flex items-center justify-center max-xxs:gap-6 xxs:gap-10 md:gap-7 flex-col">
       <TypewriterEffect words={introducerWords} className="tracking-widest text-balance" />
       <h1 className="text-xl sm:text-2xl md:text-3xl text-center !leading-[1.5] tracking-widest text-balance">
         Frontend Developer based in Romania
