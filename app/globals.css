@@ -10,7 +10,7 @@
     --muted-foreground: 215.4 16.3% 46.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --card: 218 89% 80%;
+    --card: 0 0% 93%;
     --card-foreground: 222.2 84% 4.9%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
@@ -24,7 +24,7 @@
     --destructive-foreground: 210 40% 98%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
-    --section-gap: 80px;
+    --section-gap: 40px;
   }
 
   .dark {

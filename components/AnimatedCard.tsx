@@ -7,15 +7,18 @@ import { DiGithub, DiLinux, DiMongodb, DiPostgresql } from "react-icons/di";
 import { GrReactjs } from "react-icons/gr";
 import { SiPrisma, SiRedux, SiTypescript, SiVercel } from "react-icons/si";
 import { BsDatabase } from "react-icons/bs";
+import Card from "./CardBox";
 
 export function AnimatedCard() {
   return (
-    <Card>
+    <Card className="w-full">
       <CardSkeletonContainer>
         <Skeleton />
       </CardSkeletonContainer>
-      <CardTitle>My Tech Stack</CardTitle>
-      <CardDescription>Here are some of the technologies I utilize in my projects</CardDescription>
+      <CardTitle className="text-2xl">My Tech Stack</CardTitle>
+      <CardDescription className="text-lg">
+        Here are some of the technologies I utilize in my projects
+      </CardDescription>
     </Card>
   );
 }
@@ -80,25 +83,6 @@ const Skeleton = () => {
           <DiGithub className="h-6 w-6" />
         </Container>
       </div>
-    </div>
-  );
-};
-
-export const Card = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
-  return (
-    <div
-      className={cn(
-        "w-full mx-auto p-8 rounded-xl border border-[rgba(255,255,255,0.25)] bg-card shadow-[2px_4px_16px_0px_rgba(248,248,248,0.25)_inset] group",
-        className
-      )}
-    >
-      {children}
     </div>
   );
 };
