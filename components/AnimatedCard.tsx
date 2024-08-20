@@ -16,7 +16,7 @@ export function AnimatedCard() {
         <Skeleton />
       </CardSkeletonContainer>
       <CardTitle className="text-2xl">My Tech Stack</CardTitle>
-      <CardDescription className="text-lg">
+      <CardDescription className="max-md:text-base text-lg">
         Here are some of the technologies I utilize in my projects
       </CardDescription>
     </Card>
@@ -44,7 +44,7 @@ const Skeleton = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className=" overflow-y-auto h-full relative flex justify-center scrollbar-width-none">
+    <div className="h-full relative flex justify-center scrollbar-width-none">
       <div className="flex flex-row flex-wrap justify-center items-center gap-5">
         <Container className="circle-1">
           <RiTailwindCssFill className="h-6 w-6" />
@@ -135,7 +135,7 @@ export const CardSkeletonContainer = ({
   showGradient?: boolean;
 }) => {
   return (
-    <div className={cn("h-[15rem] md:h-[12rem] rounded-xl z-40", className, showGradient && "")}>
+    <div className={cn("h-fit md:h-[12rem] rounded-xl z-40", className, showGradient && "")}>
       {children}
     </div>
   );
