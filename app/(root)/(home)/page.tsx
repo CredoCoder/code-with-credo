@@ -2,14 +2,21 @@ import AboutMe from "@/components/sections/AboutMe";
 import { BackgroundBeams } from "@/components/BeamsBackground";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
+import prisma from "@/lib/prisma";
 
-export default function Home() {
+const getProjects = async () => {
+  const projects = await prisma.project.findMany();
+
+  return projects;
+};
+
+export default async function Home() {
   return (
     <>
       {/* <BackgroundBeams /> */}
       <Hero />
       <AboutMe />
-      <Projects />
+      <Projects projects={await getProjects()} />
     </>
   );
 }
