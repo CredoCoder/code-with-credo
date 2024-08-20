@@ -1,6 +1,7 @@
 import AboutMe from "@/components/sections/AboutMe";
 import { BackgroundBeams } from "@/components/BeamsBackground";
 import Hero from "@/components/sections/Hero";
+import Projects from "@/components/sections/Projects";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       {/* <BackgroundBeams /> */}
       <Hero />
       <AboutMe />
+      <Projects />
     </>
   );
 }

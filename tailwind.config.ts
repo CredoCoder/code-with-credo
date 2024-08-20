@@ -68,6 +68,7 @@ const config = {
       },
       margin: {
         sectionGap: "var(--section-gap)",
+        mobileSectionGap: "calc(var(--section-gap) / 1.5)",
       },
       keyframes: {
         "accordion-down": {
