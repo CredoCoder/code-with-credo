@@ -13,7 +13,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="w-full flex items-center justify-center max-xxs:gap-6 xxs:gap-10 md:gap-7 flex-col mt-sectionGap max-md:mt-mobileSectionGap">
+    <section className="w-full h-[calc(100vh-5rem)] flex items-center justify-evenly max-xxs:gap-6 xxs:gap-10 md:gap-7 flex-col">
       <TypewriterEffect words={introducerWords} className="tracking-widest text-balance" />
       <h1 className="text-xl sm:text-2xl md:text-3xl text-center !leading-[1.5] tracking-[0.2rem] text-balance">
         Frontend Developer based in Romania
@@ -24,7 +24,7 @@ const Hero = () => {
         priority
         width={350}
         height={350}
-        className="rounded-full max-sm:max-h-[250px] max-sm:max-w-[250px]"
+        className="rounded-full max-sm:max-h-[250px] max-sm:max-w-[250px] w-auto h-auto"
       />
       <div className="flex flex-col gap-4">
         <h1 className="text-xl text-center !leading-[1.5] text-balance uppercase tracking-widest">

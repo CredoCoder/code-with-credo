@@ -44,7 +44,7 @@ export const TypewriterEffect: FC<Props> = ({ words, className, cursorClassName 
 
   const renderWords = () => {
     return (
-      <motion.div ref={scope} className="inline he">
+      <motion.div ref={scope} className="inline">
         {wordsArray.map((word, idx) => {
           return (
             <div key={`word-${idx}`} className="inline-block">
@@ -64,7 +64,6 @@ export const TypewriterEffect: FC<Props> = ({ words, className, cursorClassName 
       </motion.div>
     );
   };
-  // py-8 sm:py-10 md:py-12 lg:py-14
   return (
     <div
       className={cn(

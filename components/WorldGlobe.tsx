@@ -1,12 +1,14 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import LoadingSpinner from "./LoadingSpinner";
 
 const World = dynamic(() => import("./ui/Globe").then((m) => m.World), {
   ssr: false,
 });
 
 const WorldGlobe = () => {
+  const [delayIsOver, setDelayIsOver] = useState(false);
   const globeConfig = {
     pointSize: 4,
     globeColor: "#193e8e",
@@ -393,12 +395,20 @@ const WorldGlobe = () => {
     },
   ];
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDelayIsOver(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="h-[50%] flex items-center justify-center relative w-full bottom-0 cursor-grab">
+    <div className="h-[60%] flex items-center justify-center relative w-full bottom-0 cursor-grab">
       <div className="w-full relative h-[100%] px-4">
         {/* <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" /> */}
-        <div className="absolute w-full h-72 md:h-full z-10 left-0">
-          <World data={sampleArcs} globeConfig={globeConfig} />
+        <div className="absolute w-full h-72 md:h-full z-10 left-0 flex justify-center items-center">
+          {delayIsOver ? <World data={sampleArcs} globeConfig={globeConfig} /> : <LoadingSpinner />}
         </div>
       </div>
     </div>
