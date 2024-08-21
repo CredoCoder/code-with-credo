@@ -15,7 +15,7 @@ export function AnimatedCard() {
       <CardSkeletonContainer>
         <Skeleton />
       </CardSkeletonContainer>
-      <CardTitle className="max-xs:text-lg max-md:text-xl text-2xl">My Tech Stack</CardTitle>
+      <CardTitle className="max-xs:text-lg max-md:text-xl text-2xl">My tech stack</CardTitle>
       <CardDescription className="max-md:text-base text-lg">
         Here are some of the technologies I utilize in my projects
       </CardDescription>

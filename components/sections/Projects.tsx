@@ -18,7 +18,7 @@ const Projects: FC<Props> = ({ projects }) => {
           <span className="text-primary dark:text-primary">recent projects</span>
         </strong>
       </SectionTitle>
-      <div className="h-fit md:h-[35rem] w-full grid items-center grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="h-fit w-full grid items-center grid-cols-1 md:grid-cols-2 gap-5">
         {projects.map((item) => {
           return (
             <PinContainer
@@ -27,9 +27,14 @@ const Projects: FC<Props> = ({ projects }) => {
               href={item.link}
               className="pin-container h-full"
             >
-              <div className="flex flex-col justify-center items-center p-1 md:p-2 tracking-tight w-full h-full md:h-[35rem]">
+              <div className="flex flex-col justify-center items-center p-1 md:p-2 tracking-tight w-full h-full">
                 <div className="h-full w-full rounded-lg relative overflow-hidden">
-                  <Image src={item.imagePath} alt={item.title} fill />
+                  <Image
+                    src={item.imagePath}
+                    alt={item.title}
+                    fill
+                    className="object-cover object-top"
+                  />
                 </div>
                 <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base pt-2">{item.title}</h3>
                 <div className="text-base !m-0 !p-0 font-normal">
