@@ -67,7 +67,7 @@ export const TypewriterEffect: FC<Props> = ({ words, className, cursorClassName 
   return (
     <div
       className={cn(
-        "text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-center tracking-wide",
+        "max-xxs:text-xl text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-center tracking-wide",
         className
       )}
     >
