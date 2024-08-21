@@ -13,7 +13,7 @@ const getProjects = async () => {
 export default async function Home() {
   return (
     <>
-      {/* <BackgroundBeams /> */}
+      <BackgroundBeams />
       <Hero />
       <AboutMe />
       <Projects projects={await getProjects()} />
