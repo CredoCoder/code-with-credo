@@ -1,8 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export const PinContainer = ({
   children,
@@ -47,7 +46,7 @@ export const PinContainer = ({
           style={{
             transform: transform,
           }}
-          className="w-full absolute left-1/2 p-4 top-1/2  flex justify-start items-start  rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-black border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden  max-md:h-full"
+          className="w-full absolute left-1/2 p-4 top-1/2  flex justify-start items-start  rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-card border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden  max-md:h-full"
         >
           <div className={cn(" relative z-50 w-full", className)}>{children}</div>
         </div>
@@ -59,7 +58,7 @@ export const PinContainer = ({
 
 export const PinPerspective = ({ title, href }: { title?: string; href?: string }) => {
   return (
-    <motion.div className="janos max-md:w-full max-md:h-full w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
+    <motion.div className="max-md:w-full max-md:h-full w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
       <div className=" w-full h-full -mt-7 flex-none  inset-0">
         <div className="absolute max-md:top-[20%] top-0 inset-x-0  flex justify-center">
           <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 ">

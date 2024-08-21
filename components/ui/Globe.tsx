@@ -241,7 +241,7 @@ export function World(props: WorldProps) {
     <Canvas
       scene={scene}
       camera={new PerspectiveCamera(50, aspect, 180, 1800)}
-      className="!pointer-events-none"
+      className="max-md:!pointer-events-none"
     >
       <WebGLRendererConfig />
       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
