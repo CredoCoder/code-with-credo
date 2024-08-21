@@ -19,31 +19,33 @@ const Projects: FC<Props> = ({ projects }) => {
         </strong>
       </SectionTitle>
       <div className="h-fit w-full grid items-center grid-cols-1 md:grid-cols-2 gap-5">
-        {projects.map((item) => {
-          return (
-            <PinContainer
-              key={item.id}
-              title={item.link}
-              href={item.link}
-              className="pin-container h-full"
-            >
-              <div className="flex flex-col justify-center items-center p-1 md:p-2 tracking-tight w-full h-full">
-                <div className="h-full w-full rounded-lg relative overflow-hidden">
-                  <Image
-                    src={item.imagePath}
-                    alt={item.title}
-                    fill
-                    className="object-cover object-top"
-                  />
+        {projects
+          .sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime())
+          .map((item) => {
+            return (
+              <PinContainer
+                key={item.id}
+                title={item.link}
+                href={item.link}
+                className="pin-container h-full"
+              >
+                <div className="flex flex-col justify-center items-center p-1 md:p-2 tracking-tight w-full h-full">
+                  <div className="h-full w-full rounded-lg relative overflow-hidden">
+                    <Image
+                      src={item.imagePath}
+                      alt={item.title}
+                      fill
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base pt-2">{item.title}</h3>
+                  <div className="text-base !m-0 !p-0 font-normal">
+                    <span className="text-slate-500 ">{item.description}</span>
+                  </div>
                 </div>
-                <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base pt-2">{item.title}</h3>
-                <div className="text-base !m-0 !p-0 font-normal">
-                  <span className="text-slate-500 ">{item.description}</span>
-                </div>
-              </div>
-            </PinContainer>
-          );
-        })}
+              </PinContainer>
+            );
+          })}
       </div>
     </section>
   );
