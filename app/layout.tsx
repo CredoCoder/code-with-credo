@@ -4,6 +4,7 @@ import "./globals.css";
 import ThemeProvider from "@/providers/ThemeProvider";
 import Navbar from "@/components/navbar/Navbar";
 import WrapperContainer from "@/components/WrapperContainer";
+import { Analytics } from "@vercel/analytics/react";
 
 const OpenSans = Open_Sans({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({
           <Navbar />
           <WrapperContainer>{children}</WrapperContainer>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

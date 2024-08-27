@@ -47,7 +47,7 @@ const Projects: FC<Props> = ({ projects }) => {
                   </div>
                   <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base pt-2">{item.title}</h3>
                   <div className="text-sm md:text-base !m-0 !p-0 font-normal flex flex-col gap-3 justify-center items-center">
-                    <span className="text-slate-500 ">{item.description}</span>
+                    <span className="text-slate-400 dark:text-slate-300">{item.description}</span>
                     <div className="flex gap-3 items-center justify-center">
                       <LogoContainer className="w-fit h-fit p-3">
                         <p className="text-sm font-bold">
@@ -58,6 +58,7 @@ const Projects: FC<Props> = ({ projects }) => {
                         <Link
                           href={item.github}
                           className={`${isPrivateRepository && "pointer-events-none"}`}
+                          aria-label="GitHub repository"
                         >
                           <DiGithub
                             className={`h-8 w-8 cursor-pointer ${

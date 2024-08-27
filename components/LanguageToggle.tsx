@@ -15,7 +15,7 @@ const LanguageToggle = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="secondary" size="icon">
+        <Button variant="secondary" size="icon" aria-label="language toggler">
           <Earth className="h-[1.2rem] w-[1.2rem]" />
         </Button>
       </DropdownMenuTrigger>
