@@ -30,6 +30,7 @@ export const PinContainer = ({
       className={cn("relative group/pin max-xs:h-[30rem] h-[35rem]", containerClassName)}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      onClick={() => setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)")}
     >
       <div
         style={{

@@ -2,7 +2,7 @@ import AboutMe from "@/components/sections/AboutMe";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
 import prisma from "@/lib/prisma";
-import { Metadata } from "next";
+import Contact from "@/components/sections/Contact";
 
 const getProjects = async () => {
   const projects = await prisma.project.findMany();
@@ -17,6 +17,7 @@ export default async function Home() {
       <Hero />
       <AboutMe />
       <Projects projects={await getProjects()} />
+      <Contact />
     </>
   );
 }

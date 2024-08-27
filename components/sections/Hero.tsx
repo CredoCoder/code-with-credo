@@ -1,6 +1,7 @@
 import React from "react";
 import { TypewriterEffect } from "../TypewriterEffect";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   const introducerWords = [
@@ -34,12 +35,14 @@ const Hero = () => {
           Turning <strong className="text-primary">Ideas</strong> into Smooth User Experiences
         </h1>
       </div>
-      <button className="relative inline-flex h-12 overflow-hidden rounded-md p-[2px] focus:outline-none">
-        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#3B82F6,#E2CBFF_100%)]" />
-        <span className="max-xs:text-sm inline-flex h-full w-full cursor-pointer items-center justify-center rounded-md bg-background px-3 py-1 font-medium  backdrop-blur-3xl">
-          Get to know me
-        </span>
-      </button>
+      <Link href={"/#about"}>
+        <button className="relative inline-flex h-12 overflow-hidden rounded-md p-[2px] focus:outline-none">
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#3B82F6,#E2CBFF_100%)]" />
+          <span className="max-xs:text-sm inline-flex h-full w-full cursor-pointer items-center justify-center rounded-md bg-background px-3 py-1 font-medium  backdrop-blur-3xl">
+            Get to know me
+          </span>
+        </button>
+      </Link>
       <div className="w-10 h-16 border-4 border-solid border-foreground max-sm:rounded-md rounded-full  relative">
         <div className="w-2 h-2 max-sm:w-3 max-sm:h-3 bg-foreground rounded-full absolute top-3 max-sm:left-2/3 left-1/2  transform -translate-x-1/2 opacity-100 animate-wheel"></div>
       </div>

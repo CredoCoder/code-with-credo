@@ -7,7 +7,6 @@ import Image from "next/image";
 import { LogoContainer } from "../AnimatedCard";
 import { DiGithub } from "react-icons/di";
 import Link from "next/link";
-import Description from "../SectionDescription";
 
 type Props = {
   projects: Project[];
@@ -54,7 +53,7 @@ const Projects: FC<Props> = ({ projects }) => {
                           {isPrivateRepository ? "Private" : "Public"}
                         </p>
                       </LogoContainer>
-                      <LogoContainer className="circle-8">
+                      <LogoContainer>
                         <Link
                           href={item.github}
                           className={`${isPrivateRepository && "pointer-events-none"}`}
