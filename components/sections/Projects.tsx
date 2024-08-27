@@ -55,8 +55,11 @@ const Projects: FC<Props> = ({ projects }) => {
                       </LogoContainer>
                       <LogoContainer>
                         <Link
+                          target="_blank"
                           href={item.github}
-                          className={`${isPrivateRepository && "pointer-events-none"}`}
+                          className={`${
+                            isPrivateRepository && "pointer-events-none"
+                          } flex w-full items-center justify-center`}
                           aria-label="GitHub repository"
                         >
                           <DiGithub
