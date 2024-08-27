@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Code With Credo",
     images: [
       {
-        url: "https://code-with-credo.vercel.app/images/hero.png",
+        url: "https://code-with-credo.vercel.app/images/hero.jpg",
         width: 1200,
         height: 630,
       },
