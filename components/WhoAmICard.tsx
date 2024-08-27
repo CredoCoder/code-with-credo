@@ -2,12 +2,7 @@ import React from "react";
 import Card from "./CardBox";
 import WorldGlobe from "./WorldGlobe";
 import SectionTitle from "./SectionTitle";
-
-const Description = ({ text, bold }: { text: string; bold?: boolean }) => {
-  return (
-    <h2 className={`text-base md:text-xl tracking-wide w-fit ${bold && "font-bold"}`}>{text}</h2>
-  );
-};
+import Description from "./SectionDescription";
 
 const WhoAmICard = () => {
   return (

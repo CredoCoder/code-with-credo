@@ -27,14 +27,9 @@ export const PinContainer = ({
 
   return (
     <div
-      // fit
-      className={cn(
-        "relative group/pin  cursor-pointer max-xxs:h-[25rem] max-xs:h-[30rem] h-[35rem]",
-        containerClassName
-      )}
+      className={cn("relative group/pin max-xs:h-[30rem] h-[35rem]", containerClassName)}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      // href={href || "/"}
     >
       <div
         style={{
@@ -64,7 +59,7 @@ export const PinPerspective = ({ title, href }: { title?: string; href?: string 
         <div className="absolute top-[20%] inset-x-0  flex justify-center">
           <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 ">
             <span
-              className="relative z-20 text-white text-xs font-bold inline-block py-0.5"
+              className="relative z-20 text-white text-xs font-bold inline-block py-0.5 cursor-pointer"
               onClick={() => window.open(href, "_blank")}
             >
               {title}

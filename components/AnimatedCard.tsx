@@ -46,42 +46,42 @@ const Skeleton = () => {
   return (
     <div className="h-full relative flex justify-center scrollbar-width-none">
       <div className="flex flex-row flex-wrap justify-center items-center gap-5">
-        <Container className="circle-1">
+        <LogoContainer className="circle-1">
           <RiTailwindCssFill className="h-6 w-6" />
-        </Container>
-        <Container className="circle-2">
+        </LogoContainer>
+        <LogoContainer className="circle-2">
           <GrReactjs className="h-6 w-6" />
-        </Container>
-        <Container className="circle-3">
+        </LogoContainer>
+        <LogoContainer className="circle-3">
           <RiNextjsFill className="h-6 w-6" />
-        </Container>
-        <Container className="circle-4">
+        </LogoContainer>
+        <LogoContainer className="circle-4">
           <SiPrisma className="h-6 w-6" />
-        </Container>
-        <Container className="circle-5">
+        </LogoContainer>
+        <LogoContainer className="circle-5">
           <DiMongodb className="h-6 w-6" />
-        </Container>
-        <Container className="circle-6">
+        </LogoContainer>
+        <LogoContainer className="circle-6">
           <DiLinux className="h-6 w-6" />
-        </Container>
-        <Container className="circle-7">
+        </LogoContainer>
+        <LogoContainer className="circle-7">
           <SiRedux className="h-6 w-6" />
-        </Container>
-        <Container className="circle-8">
+        </LogoContainer>
+        <LogoContainer className="circle-8">
           <BsDatabase className="h-6 w-6" />
-        </Container>
-        <Container className="circle-9">
+        </LogoContainer>
+        <LogoContainer className="circle-9">
           <SiTypescript className="h-6 w-6" />
-        </Container>
-        <Container className="circle-10">
+        </LogoContainer>
+        <LogoContainer className="circle-10">
           <SiVercel className="h-6 w-6" />
-        </Container>
-        <Container className="circle-11">
+        </LogoContainer>
+        <LogoContainer className="circle-11">
           <DiPostgresql className="h-6 w-6" />
-        </Container>
-        <Container className="circle-12">
-          <DiGithub className="h-6 w-6" />
-        </Container>
+        </LogoContainer>
+        <LogoContainer className="circle-12">
+          <DiGithub className="h-8 w-8" />
+        </LogoContainer>
       </div>
     </div>
   );
@@ -141,7 +141,13 @@ export const CardSkeletonContainer = ({
   );
 };
 
-const Container = ({ className, children }: { className?: string; children: React.ReactNode }) => {
+export const LogoContainer = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) => {
   return (
     <div
       className={cn(

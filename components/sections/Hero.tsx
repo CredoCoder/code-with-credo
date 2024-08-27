@@ -13,7 +13,10 @@ const Hero = () => {
   ];
 
   return (
-    <section className="w-full max-xs:h-[calc(100vh-4rem)]  h-[calc(100vh-5rem)] flex items-center justify-evenly max-xxs:gap-6 xxs:gap-10 md:gap-7 flex-col max-xs:pt-2 pt-6">
+    <section
+      id="hero"
+      className="w-full max-xs:h-[calc(100vh-4rem)]  h-[calc(100vh-5rem)] flex items-center justify-evenly max-xxs:gap-6 xxs:gap-10 md:gap-7 flex-col max-xs:pt-2 pt-6"
+    >
       <TypewriterEffect words={introducerWords} className="tracking-widest text-balance" />
       <h1 className="max-xs:text-base text-xl sm:text-2xl md:text-3xl text-center !leading-[1.5] tracking-[0.2rem] text-balance">
         Frontend Developer based in Romania

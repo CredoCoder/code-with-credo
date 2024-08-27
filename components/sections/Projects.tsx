@@ -4,14 +4,20 @@ import { PinContainer } from "../ui/PinContainer";
 import SectionTitle from "../SectionTitle";
 import { Project } from "@prisma/client";
 import Image from "next/image";
-import LoadingSpinner from "../LoadingSpinner";
+import { LogoContainer } from "../AnimatedCard";
+import { DiGithub } from "react-icons/di";
+import Link from "next/link";
+import Description from "../SectionDescription";
 
 type Props = {
   projects: Project[];
 };
 const Projects: FC<Props> = ({ projects }) => {
   return (
-    <section className="w-full flex items-center justify-center max-xxs:gap-6 xxs:gap-10 md:gap-5 flex-col mt-sectionGap max-md:mt-mobileSectionGap text-center text-balance mb-sectionGap">
+    <section
+      id="projects"
+      className="w-full flex items-center justify-center max-xxs:gap-6 xxs:gap-10 md:gap-5 flex-col mt-sectionGap max-md:mt-mobileSectionGap text-center text-balance mb-sectionGap"
+    >
       <SectionTitle text="A quick look at" className="md:mb-10">
         {" "}
         <strong>
@@ -22,6 +28,7 @@ const Projects: FC<Props> = ({ projects }) => {
         {projects
           .sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime())
           .map((item) => {
+            const isPrivateRepository = item.github.includes("private");
             return (
               <PinContainer
                 key={item.id}
@@ -39,8 +46,32 @@ const Projects: FC<Props> = ({ projects }) => {
                     />
                   </div>
                   <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base pt-2">{item.title}</h3>
-                  <div className="text-base !m-0 !p-0 font-normal">
+                  <div className="text-sm md:text-base !m-0 !p-0 font-normal flex flex-col gap-3 justify-center items-center">
                     <span className="text-slate-500 ">{item.description}</span>
+                    <div className="flex gap-3 items-center justify-center">
+                      <LogoContainer className="w-fit h-fit p-3">
+                        <p className="text-sm font-bold">
+                          {isPrivateRepository ? "Private" : "Public"}
+                        </p>
+                      </LogoContainer>
+                      <LogoContainer className="circle-8">
+                        <Link
+                          href={item.github}
+                          className={`${isPrivateRepository && "pointer-events-none"}`}
+                        >
+                          <DiGithub
+                            className={`h-8 w-8 cursor-pointer ${
+                              isPrivateRepository && "opacity-50 "
+                            }`}
+                          />
+                        </Link>
+                      </LogoContainer>
+                      <LogoContainer className="w-fit h-fit p-3">
+                        <p className="text-sm font-bold">
+                          {item.isDeployed ? "Deployed" : "Not Deployed"}
+                        </p>
+                      </LogoContainer>
+                    </div>
                   </div>
                 </div>
               </PinContainer>
