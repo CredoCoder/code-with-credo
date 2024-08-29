@@ -16,7 +16,7 @@ const LanguageToggle = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="secondary" size="icon" aria-label="language toggler">
-          <Earth className="h-[1.2rem] w-[1.2rem]" />
+          <Earth className="h-[1.2rem] w-[1.2rem] cursor-not-allowed opacity-50" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
